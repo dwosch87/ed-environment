@@ -1,0 +1,16 @@
+# Docker compose file for energydrink factory project
+# Creates multiple databases which are required for the energydrink factory services
+version: '3.1'
+
+services:
+  db:
+    ports:
+      - 5433:5433
+    image: postgres
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    restart: always
+    environment:
+      POSTGRES_MULTIPLE_DATABASES: postgres_energydrink
+      POSTGRES_USER: energydrink
+      POSTGRES_PASSWORD: addicted

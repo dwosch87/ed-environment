@@ -5,7 +5,7 @@ version: '3.1'
 services:
   db_energy:
     ports:
-      - 5433:5433
+      - 5433:5432
     image: postgres
     volumes:
       - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d

@@ -1,4 +1,4 @@
-# Energydrink factory environment
+# Energydrink microservice environment
 
 The project requires a local running docker environment.
 
